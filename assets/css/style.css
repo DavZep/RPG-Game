@@ -1,6 +1,4 @@
-* {
-    border: solid red;
-}
+
 
 html {
     min-height: 100%;
@@ -23,6 +21,7 @@ body {
     width: 150px;
 
 }
+
 .mothra {
  color: teal;
 }
@@ -56,10 +55,43 @@ body {
     width: 400px;
 }
 
-.user-player {
+.player-titleU {
+    padding-left: 78%;
+    color: aqua;
+}
+
+.userStatus {
     float: right;
-    height: 500px;
-    width: 400px;
+    color: rgb(29, 230, 22);
+}
+
+
+.attack-img {
+    position: relative;
+    text-align: center;
+    color: rgb(253, 7, 7);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#opponent {
+    float: right;
+    color: rgb(253, 7, 56);
+}
+
+.player-op {
+    height: 350px;
+    width: 300px;
+}
+
+.player-user {
+    height: 350px;
+    width: 300px;
 }
 
 .footer {
