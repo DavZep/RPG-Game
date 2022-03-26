@@ -9,90 +9,100 @@ body {
     background: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 100%;
 }
 
-.game-name {
-    display: flex;
-    justify-content: center;
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 80px;
+    width: 325px;
 }
 
-.player-img-top {
-    height: 200px;
-    width: 150px;
-
-}
-
-.mothra {
- color: teal;
-}
-.ghidorah {
-    color: orange;
-}
-.rodan {
-    color: red;
-}
-.godzilla {
-    color: aqua;
-}
-
-
-.fighters {
-    height: 200px;
-    width: 125px;
-}
-
-.player-header {
+.info {
+    color: turquoise;
     text-align: center;
 }
 
-.player-health {
-    color: rgb(29, 230, 22);
+
+.ghidorah,
+.godzilla,
+.rodan,
+.mothra {
+    height: 100px;
+    width: 75px;
 }
 
-.user-player {
-    float: left;
-    height: 500px;
-    width: 400px;
+.char-name {
+    font-size: 20px;
 }
 
-.player-titleU {
-    padding-left: 78%;
-    color: aqua;
+.ghi {
+    color: rgb(241, 146, 21);
 }
 
-.userStatus {
+.moth {
+    color: aquamarine;
+}
+
+.god {
+    color: rgb(29, 32, 184);
+}
+
+.rod {
+    color: coral;
+}
+
+
+.player1,
+.player-opp {
+    height: 300px;
+    width: 200px;
+}
+
+.player-opp {
     float: right;
-    color: rgb(29, 230, 22);
 }
 
-
-.attack-img {
-    position: relative;
+.attack-btn {
+    position: absolute;
     text-align: center;
     color: rgb(253, 7, 7);
 }
 
-.centered {
+.explosion {
+    height: 125px;
+    width: 125px;
+
+}
+
+.attack {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#opponent {
+.opponent {
     float: right;
-    color: rgb(253, 7, 56);
 }
 
-.player-op {
-    height: 350px;
-    width: 300px;
+.char-name-player {
+    color: cyan;
 }
 
-.player-user {
-    height: 350px;
-    width: 300px;
+.char-name-opp {
+    color: red;
 }
+
+.health-status {
+    color: chartreuse;
+}
+
+
+
 
 .footer {
     padding: 6px 0;
@@ -107,4 +117,47 @@ body {
 .footer,
 .push {
     height: 40px;
+}
+
+@media (min-width: 600px) {
+    .banner {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: 100px;
+        width: 800px;
+    }
+    
+
+    .ghidorah,
+    .godzilla,
+    .rodan,
+    .mothra {
+        height: 200px;
+        width: 150px;
+    }
+
+    .attack-btn {
+        position: absolute;
+        text-align: center;
+        color: rgb(253, 7, 7);
+    }
+    
+    .explosion {
+        height: 250px;
+        width: 250px;
+    
+    }
+    
+    .attack {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 1200px) {
+
 }
