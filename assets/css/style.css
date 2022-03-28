@@ -27,12 +27,13 @@ body {
 }
 
 
-.ghidorah,
-.godzilla,
-.rodan,
-.mothra {
+.ghid,
+.godz,
+.rodn,
+.motha {
     height: 100px;
     width: 75px;
+    cursor: pointer;
 }
 
 .char-name {
@@ -58,8 +59,8 @@ body {
 
 .player1,
 .player-opp {
-    height: 300px;
-    width: 200px;
+    height: 200px;
+    width: 150px;
 }
 
 .player-opp {
@@ -67,18 +68,24 @@ body {
 }
 
 .attack-btn {
-    position: absolute;
+    position: relative;
     text-align: center;
+    padding: 0;
+    margin: 0;
     color: rgb(253, 7, 7);
+    cursor: pointer;
 }
 
 .explosion {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
     height: 125px;
     width: 125px;
-
+    
 }
 
-.attack {
+.attack-letters {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -97,7 +104,9 @@ body {
     color: red;
 }
 
-.health-status {
+.health-status,
+.health-status1,
+.health-status2 {
     color: chartreuse;
 }
 
@@ -130,12 +139,19 @@ body {
     }
     
 
-    .ghidorah,
-    .godzilla,
-    .rodan,
-    .mothra {
+    .ghid,
+    .godz,
+    .rodn,
+    .motha {
         height: 200px;
         width: 150px;
+    }
+
+    .player1,
+    .player-opp {
+        height: 300px;
+        width: 200px;
+
     }
 
     .attack-btn {
@@ -145,12 +161,13 @@ body {
     }
     
     .explosion {
-        height: 250px;
-        width: 250px;
+        vertical-align: middle;
+        height: 200px;
+        width: 200px;
     
     }
     
-    .attack {
+    .attack-letters {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -158,6 +175,52 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
+    .banner {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: 100px;
+        width: 800px;
+    }
+    
 
+    .ghid,
+    .godz,
+    .rodn,
+    .motha {
+        margin: auto;
+        padding: auto;
+        height: 175px;
+        width: 125px;
+    }
+
+    .player1,
+    .player-opp {
+        height: 300px;
+        width: 200px;
+
+    }
+
+    .attack-btn {
+        position: absolute;
+        text-align: center;
+        color: rgb(253, 7, 7);
+    }
+    
+    .explosion {
+        vertical-align: middle;
+        height: 300px;
+        width: 300px;
+    
+    }
+    
+    .attack-letters {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
+
