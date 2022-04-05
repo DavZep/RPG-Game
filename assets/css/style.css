@@ -21,9 +21,22 @@ body {
     width: 325px;
 }
 
-.info {
-    color: turquoise;
+.info-fighter {
+    color: aquamarine;
     text-align: center;
+}
+
+.info {
+    color: red;
+    text-align: center;
+}
+
+#reset {
+    vertical-align: center;
+}
+
+#points-stats {
+    border: solid red;
 }
 
 
@@ -36,9 +49,32 @@ body {
     cursor: pointer;
 }
 
-.char-name {
+.opponent-title,
+.fighter-title {
+    font-size: 30px;
+}
+
+.opponent-title {
+    color: red;
+}
+
+.fighter-title {
+    color: aquamarine;
+}
+
+.fighter-name {
     font-size: 20px;
     color: aquamarine;
+}
+
+.opponent-name {
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+}
+
+.attack-damage {
+    font-size: 20px;
+    color: rgb(250, 3, 3);
 
 }
 
@@ -130,7 +166,7 @@ body {
     height: 40px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 993px) {
     .banner {
         display: block;
         margin-left: auto;
@@ -164,8 +200,8 @@ body {
     
     .explosion {
         vertical-align: middle;
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
     
     }
     
@@ -175,9 +211,25 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    .info-fighter {
+        color: aquamarine;
+        text-align: center;
+    }
+
+    .info {
+        font-size: 20px;
+        color: red;
+        text-align: center;
+    }
+
+    #reset {
+        position: relative;
+        margin-top: 100px;
+    }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .banner {
         display: block;
         margin-left: auto;
@@ -213,8 +265,8 @@ body {
     
     .explosion {
         vertical-align: middle;
-        height: 300px;
-        width: 300px;
+        height: 225px;
+        width: 225px;
     
     }
     
@@ -224,5 +276,11 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-}
+    #reset {
+        position: relative;
+        margin-top: 150px;
+    }
+
+
+} */
 

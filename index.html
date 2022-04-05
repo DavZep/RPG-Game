@@ -28,7 +28,7 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="info">
+                <div class="info-fighter">
                     <h2>Choose your Fighter!</h2>
                 </div>
             </div>
@@ -39,23 +39,23 @@
                     <div class="col-sm-2"></div>                    
                     <div id="ghidorah-wrap" class="col-sm-2 col-3 players-g opponents">
                         <img id="ghidorah" class="ghid" src="./assets/images/ghidorah.jpg" alt="ghidorah">
-                        <h5 class="char-name ghi">Ghidorah</h5>
-                        <h5 class="health-status">HP</h5>
+                        <h5 class="char-name ghi">GHIDORAH</h5>
+                        <h5 class="health-status">HP 1000</h5>
                     </div>
                     <div  id="godzilla-wrap" class="col-sm-2 col-3 players opponents">
                         <img id="godzilla" class="godz" src="./assets/images/godzilla.jpg" alt="godzilla">
-                        <h5 class="char-name god">Godzilla</h5>
-                        <h5 class="health-status">HP</h5>
+                        <h5 class="char-name god">GODZILLA</h5>
+                        <h5 class="health-status">HP 900</h5>
                     </div>
                     <div id="rodan-wrap" class="col-sm-2 col-3 players opponents">
                         <img id="rodan" class="rodn" src="./assets/images/rodan.jpg" alt="rodan">
-                        <h5 class="char-name rod">Rodan</h5>
-                        <h5 class="health-status">HP</h5>
+                        <h5 class="char-name rod">RODAN</h5>
+                        <h5 class="health-status">HP 850</h5>
                     </div>
                     <div id="mothra-wrap" class="col-sm-2 col-3 players opponents">
                         <img id="mothra" class="motha" src="./assets/images/mothra.jpg" alt="mothra">
-                        <h5 class="char-name moth">Mothra</h5>
-                        <h5 class="health-status">HP</h5>
+                        <h5 class="char-name moth">MOTHRA</h5>
+                        <h5 class="health-status">HP 850</h5>
                     </div>
                     <div class="col-sm-2"></div>
                 </div>
@@ -64,24 +64,29 @@
         <div class="fighters">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-3">
                         <div id="player1" class="player">
-                            <!-- <img class="player1" src="./assets/images/godzilla.jpg" alt="">
-                            <h5 class="char-name-player">PLAYER</h5>
-                            <h5 class="health-status">HP</h5> -->
+                            <h3 class="fighter-title">Your Fighter</h3>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="attack-btn">
-                            <img id="attack" class="explosion" src="./assets/images/explosion-icon-9151.png" alt="attack">
-                            <h5 id="attack" class="attack-letters">ATTACK!</h5>
+                    <di class="col-3">
+                        <div class="game-info">
+                            <div id="attack-stats" class="info">
+                            </div>
+                            <div id="counter-stats" class="info">
+                            </div>
+                            <button id="reset" class="btn btn-primary">Reset</button>
                         </div>
+                    </di>
+                    <div class="col-3">
+                            <div class="attack-btn">
+                                <img id="attack" class="explosion" src="./assets/images/explosion-icon-9151.png" alt="attack">
+                                <h5 id="attack" class="attack-letters">ATTACK!</h5>
+                            </div>
                     </div>
-                    <div class="col-4">
-                        <div id="opponent"class="opponent">
-                            <!-- <img class="player-opp" src="./assets/images/ghidorah.jpg" alt="">
-                            <h5 class="char-name-opp">OPPONENT</h5>
-                            <h5 class="health-status">HP</h5> -->
+                    <div class="col-3">
+                        <div id="opponent" class="opponent">
+                            <h3 class="opponent-title">Opponent</h3>
                          </div>
                     </div>
                 </div>
