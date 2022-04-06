@@ -40,10 +40,10 @@ body {
 }
 
 
-.ghid,
-.godz,
-.rodn,
-.motha {
+.ghidorah,
+.godzilla,
+.rodan,
+.mothra {
     height: 100px;
     width: 75px;
     cursor: pointer;
@@ -146,9 +146,13 @@ body {
 .health-status1,
 .health-status2 {
     color: chartreuse;
+    font-size: 25px;
+
 }
 
-
+.alert-dark {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
 
 .footer {
@@ -177,10 +181,10 @@ body {
     }
     
 
-    .ghid,
-    .godz,
-    .rodn,
-    .motha {
+    .ghidorah,
+    .godzilla,
+    .rodan,
+    .mothra {
         height: 200px;
         width: 150px;
     }
