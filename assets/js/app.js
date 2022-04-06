@@ -38,8 +38,9 @@ var monstersKilled = 0;
 var monsters = [
     {
         name: "ghidorah",
-        health: 140,
-        attackHp: 5,
+        nameColor: "ghi",
+        health: 1200,
+        attackHp: 80,
         selected: false,
         opponent: false,
         fighter: false,
@@ -47,8 +48,9 @@ var monsters = [
     },
     {
         name: "godzilla",
-        health: 130,
-        attackHp: 9,
+        nameColor: "god",
+        health: 975,
+        attackHp: 95,
         selected: false,
         opponent: false,
         fighter: false,
@@ -57,8 +59,9 @@ var monsters = [
     },
     {
         name: "rodan",
-        health: 95,
-        attackHp: 8,
+        nameColor: "rod",
+        health: 960,
+        attackHp: 90,
         selected: false,
         opponent: false,
         fighter: false,
@@ -67,8 +70,9 @@ var monsters = [
     },
     {
         name: "mothra",
-        health: 85,
-        attackHp: 8,
+        nameColor: "moth",
+        health: 850,
+        attackHp: 100,
         selected: false,
         opponent: false,
         fighter: false,
@@ -78,7 +82,6 @@ var monsters = [
 ]
 
 //creates fighter & opponent
-
 function createFighter(monsterPick, i) {
     if (currentPlayers.length < 2){
         currentPlayers.push(i);
@@ -92,6 +95,7 @@ function createFighter(monsterPick, i) {
             var playerFighter = document.createElement("img");
             playerFighter.src = monsters[i].image;
             playerFighter.setAttribute("class", "player1");
+            playerFighter.setAttribute("alt", `${monsterPick}`);
             wrap.appendChild(playerFighter);
     
             var name = document.createElement("h5");
@@ -133,18 +137,16 @@ function createFighter(monsterPick, i) {
 
         }
         monsters[i].selected = true
-        console.log(currentPlayers);
-
-
-       
-    
-
     }
 
 }
 
 
 function createFighterOpt(){
+    var playerWrap = document.getElementById("player-options")
+    playerWrap.innerHTML = "";
+    playerDiv.innerHTML = "";
+
     for (var i = 0; i < monsters.length; i++) {
     //     <div id="ghidorah-wrap" class="col-sm-2 col-3 players-g opponents">
     //     <img id="ghidorah" class="ghid" src="./assets/images/ghidorah.jpg" alt="ghidorah">
@@ -159,11 +161,12 @@ function createFighterOpt(){
         var playerFighter = document.createElement("img");
         playerFighter.setAttribute("id", `${monsters[i].name}`)
         playerFighter.setAttribute("class", "player1");
+        playerFighter.setAttribute("alt", `${monsters[i].name}`);
         playerFighter.src = monsters[i].image;
         wrap.appendChild(playerFighter);
 
         var name = document.createElement("h5");
-        name.setAttribute("class", "char-name")
+        name.setAttribute("class", `${monsters[i].nameColor} char-name`)
         name.textContent = monsters[i].name;
         wrap.appendChild(name);
 
@@ -176,13 +179,30 @@ function createFighterOpt(){
 
     }
 }
+//remove any remaining monsters before redisplaying on reset click
+function removeMonsters() {
+    //for loop ?
+    var ghidorahDiv = document.getElementById("ghidorah-wrap")
+    var godzillaDiv = document.getElementById("godzilla-wrap")
+    var rodanDiv = document.getElementById("rodan-wrap")
+    var mothraDiv = document.getElementById("mothra-wrap")
+    if (ghidorahDiv === "ghidorah-wrap" || godzillaDiv === "godzilla-wrap" || rodanDiv === "rodan-wrap" || mothraDiv === "mothra-wrap") {
+        ghidorahDiv.remove();
+        godzillaDiv.remove();
+        rodanDiv.remove();
+        mothraDiv.remove();
+    }
+        
+    
+}
 
 
 //attack and counter attack
 function attack(){
     if (monsterPick = "attack"){
         alertMessage.classList.add("alert-dark");
-        gameStats2.textContent = " You need to Choose a Monster"
+        gameStats1.textContent = "";
+        gameStats2.textContent = " You need to Choose a Monster";
 
     
         console.log(monsters[currentPlayers[1]].attackHp)
@@ -216,7 +236,7 @@ function attack(){
             else if (monsters[currentPlayers[0]].health <= 0){
                 //fighter died game over
                 alertMessage.classList.add("alert-dark");
-                gameStats1.textContent = "You LOST! your Monster " + monsters[currentPlayers[0]].name + " died! "
+                gameStats1.textContent = "You LOST! " + monsters[currentPlayers[0]].name + " died! "
                 gameStats2.textContent = "Press reset to re-Play!";
 
                 var fighterDiv = document.getElementById(`${monsters[currentPlayers[0]].name}-wrap`);
@@ -229,12 +249,12 @@ function attack(){
                 //opponent died 
                 monstersKilled++
                 gameOver();
-                gameStats1.textContent = "You DEFEATED! " + monsters[currentPlayers[1]].name + " Choose your next Opponent!"
+                gameStats1.textContent = "You DEFEATED! " + monsters[currentPlayers[1]].name + " You absorbing its Health for the next battle... Choose your next Opponent!"
                 gameStats2.textContent = "" 
                 var opt = document.getElementById(`${monsters[currentPlayers[1]].name}-wrap`);
                 opt.remove();
                 currentPlayers.pop();
-                monsters[currentPlayers[0]].health = monsters[currentPlayers[0]].health + 50
+                monsters[currentPlayers[0]].health = monsters[currentPlayers[0]].health + 300
                 optHealthWrap.textContent = monsters[currentPlayers[1]].health
                 fighterHealthWrap.textContent = monsters[currentPlayers[0]].health
 
@@ -255,13 +275,22 @@ function gameOver() {
 
 //resets game
 function reset() {
-    
+    removeMonsters()
+
+    monsters[0].health = 1000
+    monsters[1].health = 980
+    monsters[2].health = 920
+    monsters[3].health = 850
+    selected = false
+    opponent = false
+    fighter = false
+
     gameStats1.textContent = "";
     gameStats2.textContent = "";
     alertMessage.classList.remove("alert-dark");
     currentPlayers = [];
     monstersKilled = 0;
-    console.log(currentPlayers);
+    createFighterOpt()
 
     // createFighterOpt()
     /* 

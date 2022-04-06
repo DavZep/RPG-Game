@@ -49,6 +49,15 @@ body {
     cursor: pointer;
 }
 
+#ghidorah,
+#godzilla,
+#rodan,
+#mothra {
+    height: 100px;
+    width: 75px;
+    cursor: pointer;
+}
+
 .opponent-title,
 .fighter-title {
     font-size: 30px;
@@ -185,8 +194,17 @@ body {
     .godzilla,
     .rodan,
     .mothra {
-        height: 200px;
-        width: 150px;
+        height: 250px;
+        width: 175px;
+    }
+
+    #ghidorah,
+    #godzilla,
+    #rodan,
+    #mothra {
+        height: 250px;
+        width: 170px;
+        cursor: pointer;
     }
 
     .player1,
